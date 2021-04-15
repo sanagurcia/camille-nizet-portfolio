@@ -1,0 +1,408 @@
+/* font: source code pro */
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap');
+
+/* color variables */
+:root {
+  --yellow: #fdc429;
+  --light-lavender: #ded9e6;
+  --medium-lavender: #dbd3f1;
+  --dark-lavender: #a9a8d0;
+  --black: #0b0b0b;
+}
+
+html {
+  font-family: 'Source Code Pro', monospace;
+  box-sizing: border-box;
+  color: var(--black);
+}
+
+/* box-sizing always */
+*, *::before, *::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+/* general styling */
+body {
+  overflow-x: hidden;
+  font-size: 1.6vh;
+}
+
+/* notice standard padding */
+.page {
+  height: 100vh;
+  width: 100vw;
+  padding: 4vh 10vw;  
+}
+
+h1 {
+  font-size: 4vh;
+  margin-bottom: 3vh;
+  text-decoration: underline;
+  font-weight: 400;
+}
+
+/* responsive design for tablet size */
+@media (max-aspect-ratio: 1.2) {
+  .page {
+    padding: 4vh 5vw;
+    /* reduce padding by half */
+  }
+}
+
+/* -------------------------------- */
+/* HOME */
+.home {
+  background-image: url('./assets/background_yellow.png');
+  background-size: 100vw 100vh;
+  padding: 8vh 10vw;  
+}
+
+/* header */
+.home h1 {
+  text-decoration: none;
+  font-size: 5vh;
+  letter-spacing: 0.2vw;
+}
+
+.home h1 span {
+  font-size: 1.8vh;
+}
+
+/* flex container for main & nav-bar */
+.home-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: calc(100% - 9vh); /* where 8vh = h1 height (=6vh+3vh) */
+}
+
+.home-pic img {
+  height: 60vh;
+  width: auto;
+}
+
+.home-nav-bar ul {
+  list-style-type: none;
+}
+
+.home-nav-bar ul li {
+  font-size: 4vh;
+  text-decoration: underline;
+  line-height: 6vh;
+}
+
+/* list interactivty */
+.home-nav-bar li {
+  cursor: pointer;
+}
+.home-nav-bar li:hover {
+  text-decoration: none;
+}
+.home-nav-bar li:active {
+  transform: scale(0.99);
+}
+
+/* RESPONSIVE DESIGN HOME */
+/* add horizontal padding */
+@media (min-aspect-ratio: 1.6) {
+  .home-container {
+    padding: 0 4vw;
+    /* with respect to page content box (i.e. vertical border beneath h1) */
+  }
+}
+
+/* reduce horizontal padding */
+@media (max-aspect-ratio: 1.6) {
+  .home-container {
+    padding: 0;
+  }
+}
+
+/* restructure layout for tablet */
+@media (max-aspect-ratio: 1.2) {
+  .home-container {
+    flex-direction: column;
+    justify-content: space-around;
+
+  }
+  .home h1 {
+    text-align: center;
+  }
+  .home-nav-bar ul {
+    columns: 2;
+  }
+}
+
+/* ------------------------------------- */
+/* ABOUT */
+.about {
+    background-image: url('./assets/background_almost_white.png');
+    background-size: 100vw 100vh;
+}
+
+/* top part */
+.about-main {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-text {
+  width: 55%;
+  font-size: 0.9vw; 
+}
+
+.about-text p {
+  text-align: justify;
+  margin-bottom: 1em;
+}
+
+.about-text p span:first-of-type {
+  color: #da14ff;
+}
+
+.about-text p span:last-of-type {
+  color: #33ff14;
+}
+
+.languages p {
+  text-decoration: underline;
+  margin-top: 5vh;
+  margin-bottom: 1vh;
+}
+
+.languages ul {
+  width: 60%;
+  columns: 2;
+  list-style-type: none;
+}
+
+.languages li {
+  font-size: 0.8em;
+  line-height: 2em;
+}
+
+.about-pic img {
+  height: 60vh;
+  width: auto;
+  margin-top: -7vh;
+}
+
+.about-timeline {
+  height: 25vh;
+  margin-top: 2vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-timeline .line {
+    background-color: black;
+    height: 0.5vh;
+}
+
+.about-timeline .top{
+    display: flex;
+    justify-content: space-around;
+    margin-left: 5vh;
+
+}
+
+.about-timeline .top .vertical {
+    height: 2vh;
+    border-left: 0.5vh solid black;
+    margin-top: 1vh;
+}
+
+.about-timeline .bottom{
+    display: flex;
+    justify-content: space-around;
+}
+
+.about-timeline .bottom .vertical {
+    height: 2vh;
+    border-left: 0.5vh solid black;
+    margin-bottom: 1vh;
+}
+
+.about-timeline h4 {
+    text-transform: uppercase;  
+}
+
+.about-timeline p {
+    font-size: 1.2vh;
+}
+
+@media (max-aspect-ratio: 1.6){
+  .about-text {
+    font-size: 1vw;
+  }
+}
+
+/* ------------------------------------------ */
+/* ART DIRECTION */
+.art-direction {
+    background-image: url('./assets/background_light.png');
+    background-size: 100vw 100vh;
+}
+
+.art-direction-container {
+  padding: 0 3vw 5vh;
+}
+
+.row1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-left: 10vw;
+  margin-top: -3vh;
+}
+
+#butts {
+  width: 45vh;
+}
+
+#shower {
+  width: 35vh;
+}
+
+.row2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-right: 20vw;
+}
+
+#monty {
+  width: 35vh;
+}
+
+/* tmp */
+#sports {
+  width: 36vh;
+}
+
+
+/* OTHER DIRECTIONS */
+.other-directions {
+    background-image: url('./assets/background_dark.png');
+    background-size: 100vw 100vh;
+}
+
+.other-directions p {
+  font-size: 1.8vh;
+  line-height: 3.6vh;
+}
+
+.other-directions div {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.other-directions div p {
+    font-size: 2.3vh;
+}
+
+.other-directions img {
+    width: 35vh;
+}
+
+.good-grief {
+    margin-top: 5vh;
+}
+
+.tinder {
+    margin-top: -10vh;
+    justify-content: flex-end;
+}
+
+/* ------------------------------------- */
+/* CONTACT */
+.contact {
+    background-image: url('./assets/background_yellow.png');
+    background-size: 100vw 100vh;
+  position: relative; /* for absolute positioning author bottom */
+}
+
+.contact-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: calc(100% - 25vh); /* = page content box - (h1 height + author div) */
+}
+
+.contact-pic img {
+  height: 60vh;
+  width: auto;
+}
+
+.contact-text {
+  width: 35vw;
+}
+
+.contact-text p {
+  line-height: 7vh;
+  font-size: 2vh;
+}
+
+.contact-text p:nth-of-type(1) {
+  text-align: left;
+}
+
+.contact-text p:nth-of-type(2) {
+  text-align: center;
+}
+
+.contact-text p:nth-of-type(3) {
+  text-align: right;
+}
+
+.contact-text h1 {
+  margin: 3vh 0;
+  text-decoration: none;
+  margin-left: 5vw;
+}
+
+#contact-info p {
+  text-align: start;
+  line-height: 5vh;
+  margin-left: 5vw;
+}
+
+.author {
+  height: 15vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.author .left {
+  font-size: 1.2vh;
+  width: 35vw;
+  text-align: justify;
+}
+
+.author .left h2 {
+  font-size: 2.5vw;
+  font-weight: 500;
+  text-align: center;
+}
+
+.author .right {
+  font-size: 1.8vh;
+}
+
+/* responsive design contact */
+@media (min-aspect-ratio: 1.6){
+  .contact-pic {
+    padding-left: 2vw;
+  }
+  .contact-pic img {
+    height: 65vh;
+    width: auto;
+  }
+}
+
+
