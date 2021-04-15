@@ -68,6 +68,45 @@ showVideo.addEventListener('click', function(){
 })
 
 
+/* OTHER DIRECTIONS BUTTONS  */
+const goodGriefButton = document.getElementById('good-grief');
+const tinderButton = document.getElementById('tinder');
+const goodGriefBoard = document.getElementById('good-grief-board');
+const tinderBoard = document.getElementById('tinder-board');
+const oDarkDiv = document.getElementById('o-dark-div');
+const exit2 = document.getElementById('exit2');
+const oBoards = [goodGriefBoard, tinderBoard];
+
+// good grief board
+goodGriefButton.addEventListener('click', function(){
+    // set dark background active
+    oDarkDiv.classList.toggle('active');
+    exit2.classList.toggle('active');    
+
+    // activate corresponding board
+    goodGriefBoard.classList.toggle('active');
+})
+
+// tinder board
+tinderButton.addEventListener('click', function(){
+    // set dark background active
+    oDarkDiv.classList.toggle('active');
+    exit2.classList.toggle('active');    
+
+    // activate corresponding board
+    tinderBoard.classList.toggle('active');
+})
+
+// exit2 button for oDarkDiv & oBoards
+exit2.addEventListener('click', function(){
+    oDarkDiv.classList.toggle('active');
+    this.classList.toggle('active');
+
+    let activeBoard = oBoards.find(board => board.classList.contains('active'));
+    activeBoard.classList.toggle('active');
+});
+
+
 
 /* SCROLLING */
 

@@ -442,6 +442,8 @@ h1 {
 
 .other-directions .o-button img {
     width: 35vh;
+    cursor: pointer;
+    z-index: 1;
 }
 
 .o-button.good-grief {
@@ -512,7 +514,7 @@ h1 {
 
 #exit2.active {
     opacity: 1;
-    z-index: 6;
+    z-index: 5;
     transition: 1s ease;
 }
 
