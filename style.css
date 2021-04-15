@@ -354,7 +354,7 @@ h1 {
 
 #exit.active {
     opacity: 1;
-    z-index: 4;
+    z-index: 6;
     transition: 1s ease;
 
 }
@@ -378,6 +378,46 @@ h1 {
     z-index: 4;
 }
 
+/* Video */
+#video {
+    width: 80vw;
+    position: absolute;
+    top: calc((100vh - 45vw)/2);
+    left: 10vw;
+    z-index: -2;
+    opacity: 0;
+}
+
+#video.active {
+    z-index: 5;
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+#show-video {
+    position: absolute;
+    bottom: calc((100vh - 45vw)/2);
+    right: 10vw;
+    opacity: 0;
+    z-index: -1;
+    cursor: pointer;
+    border-top-left-radius: 5vw;
+    border-top-right-radius: 5vw;
+    background-color: white;
+    width: 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#show-video p {
+    font-size: 2vw;
+}
+
+#show-video.active {
+    opacity: 1;
+    z-index: 4;
+}
 
 /* OTHER DIRECTIONS */
 .other-directions {

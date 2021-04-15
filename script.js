@@ -18,6 +18,8 @@ const darkDiv = document.getElementById("dark-div");
 const boards = Array.from(document.getElementsByClassName("board"));
 const buttons = Array.from(document.getElementsByClassName("button"));
 const exit = document.getElementById('exit');
+const showVideo = document.getElementById('show-video');
+const theVideo = document.getElementById('video');
 
 
 // assign event listener to each button
@@ -30,7 +32,13 @@ buttons.forEach(button => {
         // activate corresponding board
         let myClass = button.classList[1];
         let myBoard = boards.find(board => board.classList[1] == myClass);
-        myBoard.classList.toggle('active'); 
+        myBoard.classList.toggle('active');
+
+        // check if sports board
+        if (myBoard.classList.contains('sports')){
+             showVideo.classList.toggle('active');
+        }
+
     });
 });
 
@@ -41,7 +49,24 @@ exit.addEventListener('click', function(){
 
     let activeBoard = boards.find(board => board.classList.contains('active'));
     activeBoard.classList.toggle('active');
+
+    // check sports
+    if (activeBoard.classList.contains('sports')){
+        showVideo.classList.toggle('active');
+    }
+
+    // if video showing
+    if (theVideo.classList.contains('active')){
+        theVideo.classList.toggle('active');
+    }
 });
+
+// show video button
+showVideo.addEventListener('click', function(){
+    theVideo.classList.toggle('active');
+})
+
+
 
 /* SCROLLING */
 
