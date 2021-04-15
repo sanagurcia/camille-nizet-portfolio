@@ -356,7 +356,6 @@ h1 {
     opacity: 1;
     z-index: 6;
     transition: 1s ease;
-
 }
 
 /* description boxes */
@@ -423,6 +422,7 @@ h1 {
 .other-directions {
     background-image: url('./assets/background_dark.png');
     background-size: 100vw 100vh;
+    position: relative;
 }
 
 .other-directions p {
@@ -430,7 +430,7 @@ h1 {
   line-height: 3.6vh;
 }
 
-.other-directions div {
+.other-directions .o-button {
     display: flex;
     align-items: center;
     text-transform: uppercase;
@@ -440,18 +440,89 @@ h1 {
     font-size: 2.3vh;
 }
 
-.other-directions img {
+.other-directions .o-button img {
     width: 35vh;
 }
 
-.good-grief {
+.o-button.good-grief {
     margin-top: 5vh;
 }
 
-.tinder {
+.o-button.tinder {
     margin-top: -10vh;
     justify-content: flex-end;
 }
+
+/* Boards */
+.other-directions .o-dark.active {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0,0.7);
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    transition: 1s ease;
+}
+
+/* based on 16:9 board ratios 80vw:45vw  */
+.o-board {
+    width: 80vw;
+    height: 45vw;
+    position: absolute;
+    left: 10vw;
+    top: calc((100vh - 45vw)/2);
+    opacity: 0; 
+    transition: 1s ease;
+}
+
+.o-board.active {
+    opacity: 1;
+    z-index: 3;
+    transition: 1s ease;
+}
+
+/* this shit was giving me sooooo much trouble:
+    NB: in order for the button (<img> el) to be clickable,
+    has to be above stupid dark div! */
+.o-button {
+    z-index: 1;
+}
+
+#exit2 {
+    position: absolute;
+    top: calc((100vh - 45vw)/2);
+    right: 10vw;
+    transform: translate(50%, -50%);
+    opacity: 0;
+    z-index: -1;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: white;
+    width: 3vw;
+    height: 3vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#exit2 p {
+    font-size: 1vw;
+}
+
+#exit2.active {
+    opacity: 1;
+    z-index: 6;
+    transition: 1s ease;
+}
+
+
+
+
+
+
+
+
 
 /* ------------------------------------- */
 /* CONTACT */
