@@ -57,6 +57,7 @@ exit.addEventListener('click', function(){
 
     // if video showing
     if (theVideo.classList.contains('active')){
+        theVideo.pause();
         theVideo.classList.toggle('active');
     }
 });
