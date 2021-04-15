@@ -190,7 +190,6 @@ h1 {
 }
 
 .about-timeline {
-  height: 25vh;
   margin-top: 2vh;
   display: flex;
   flex-direction: column;
@@ -205,8 +204,11 @@ h1 {
 .about-timeline .top{
     display: flex;
     justify-content: space-around;
-    margin-left: 5vh;
+    align-items: flex-end;
+}
 
+.about-timeline .top div {
+    max-width: 15vw;
 }
 
 .about-timeline .top .vertical {
@@ -215,9 +217,14 @@ h1 {
     margin-top: 1vh;
 }
 
-.about-timeline .bottom{
+.about-timeline .bottom {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: flext-start;
+}
+
+.about-timeline .bottom div {
+    max-width: 15vw;
 }
 
 .about-timeline .bottom .vertical {
@@ -287,6 +294,7 @@ h1 {
   width: 36vh;
 }
 
+/* BOARDS */
 /* for darkening background */
 .art-direction .dark.active {
     position: absolute;
@@ -299,16 +307,18 @@ h1 {
     transition: 1s ease;
 }
 
-.art-direction .board {
-    position: absolute;
-    right: 10vw;
-    top: 5vh;
+/* based on 16:9 board ratios 80vw:45vw  */
+.board {
     width: 80vw;
+    height: 45vw;
+    position: absolute;
+    left: 10vw;
+    top: calc((100vh - 45vw)/2);
     opacity: 0;
     transition: 1s ease;
 }
 
-.art-direction .board.active {
+.board.active {
     opacity: 1;
     z-index: 3;
     transition: 1s ease;
@@ -323,23 +333,50 @@ h1 {
 
 #exit {
     position: absolute;
-    top: 5vh;
+    top: calc((100vh - 45vw)/2);
     right: 10vw;
     transform: translate(50%, -50%);
     opacity: 0;
     z-index: -1;
-    background-color: rgb(0,0,0,0);
-    color: white;
-    font-size: 5vh;
     cursor: pointer;
+    border-radius: 50%;
+    background-color: white;
+    width: 3vw;
+    height: 3vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#exit p {
+    font-size: 1vw;
 }
 
 #exit.active {
     opacity: 1;
     z-index: 4;
+    transition: 1s ease;
+
 }
 
+/* description boxes */
+.description {
+    opacity: 0;
+    position: absolute;
+    top: 50vh;
+    right: 10vw;
+    transform: translate(0, -50%);
+    width: 20vh;
+    background-color: white;
+    padding: 1vh;
+}
 
+.description.active {
+    opacity: 1;
+    color: black;
+    font-size: 1.5vh;
+    z-index: 4;
+}
 
 
 /* OTHER DIRECTIONS */
