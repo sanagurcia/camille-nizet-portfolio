@@ -13,7 +13,35 @@ function moveToPage(index){
 }
 
 
+/* BOARD POPUPS */
+const darkDiv = document.getElementById("dark-div");
+const boards = Array.from(document.getElementsByClassName("board"));
+const buttons = Array.from(document.getElementsByClassName("button"));
+const exit = document.getElementById('exit');
 
+
+// assign event listener to each button
+buttons.forEach(button => {
+    button.addEventListener('click', function(){
+        // set dark background active
+        darkDiv.classList.toggle('active');
+        exit.classList.toggle('active');    
+
+        // activate corresponding board
+        let myClass = button.classList[1];
+        let myBoard = boards.find(board => board.classList[1] == myClass);
+        myBoard.classList.toggle('active'); 
+    });
+});
+
+// exit button
+exit.addEventListener('click', function(){
+    darkDiv.classList.toggle('active');
+    this.classList.toggle('active');
+
+    let activeBoard = boards.find(board => board.classList.contains('active'));
+    activeBoard.classList.toggle('active');
+});
 
 /* SCROLLING */
 

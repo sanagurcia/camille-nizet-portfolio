@@ -245,10 +245,15 @@ h1 {
 .art-direction {
     background-image: url('./assets/background_light.png');
     background-size: 100vw 100vh;
+    position: relative;
 }
 
 .art-direction-container {
   padding: 0 3vw 5vh;
+}
+
+.art-direction-container img:hover {
+    cursor: pointer;
 }
 
 .row1 {
@@ -278,10 +283,63 @@ h1 {
   width: 35vh;
 }
 
-/* tmp */
 #sports {
   width: 36vh;
 }
+
+/* for darkening background */
+.art-direction .dark.active {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0,0.7);
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    transition: 1s ease;
+}
+
+.art-direction .board {
+    position: absolute;
+    right: 10vw;
+    top: 5vh;
+    width: 80vw;
+    opacity: 0;
+    transition: 1s ease;
+}
+
+.art-direction .board.active {
+    opacity: 1;
+    z-index: 3;
+    transition: 1s ease;
+}
+
+/* this shit was giving me sooooo much trouble:
+    NB: in order for the button (<img> el) to be clickable,
+    has to be above stupid dark div! */
+.button {
+    z-index: 1;
+}
+
+#exit {
+    position: absolute;
+    top: 5vh;
+    right: 10vw;
+    transform: translate(50%, -50%);
+    opacity: 0;
+    z-index: -1;
+    background-color: rgb(0,0,0,0);
+    color: white;
+    font-size: 5vh;
+    cursor: pointer;
+}
+
+#exit.active {
+    opacity: 1;
+    z-index: 4;
+}
+
+
 
 
 /* OTHER DIRECTIONS */
