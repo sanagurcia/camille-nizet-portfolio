@@ -20,6 +20,9 @@ const buttons = Array.from(document.getElementsByClassName("button"));
 const exit = document.getElementById('exit');
 const showVideo = document.getElementById('show-video');
 const theVideo = document.getElementById('video');
+const credits = Array.from(document.getElementsByClassName('credit'));
+const descriptions = Array.from(document.getElementsByClassName('description'));
+const showDescription = document.getElementById('show-description');
 
 
 // assign event listener to each button
@@ -39,6 +42,14 @@ buttons.forEach(button => {
              showVideo.classList.toggle('active');
         }
 
+        // credit tag
+        let myCredit = credits.find(credit => credit.classList[1] == myClass);
+        myCredit.classList.toggle('active');
+
+        // check if shower/monty -> add description button
+        if (myBoard.classList.contains('monty') || myBoard.classList.contains('shower')){
+            showDescription.classList.toggle('active');
+        }
     });
 });
 
@@ -50,9 +61,19 @@ exit.addEventListener('click', function(){
     let activeBoard = boards.find(board => board.classList.contains('active'));
     activeBoard.classList.toggle('active');
 
+    // credit tag
+    let activeCredit = credits.find(credit => credit.classList.contains('active'));
+    activeCredit.classList.toggle('active');
+
     // check sports
     if (activeBoard.classList.contains('sports')){
         showVideo.classList.toggle('active');
+    }
+
+    // check descriptions
+    if (activeBoard.classList.contains('monty') || activeBoard.classList.contains('shower')){
+        showDescription.classList.toggle('active');
+        descriptions.forEach(des => des.classList.remove('active'))
     }
 
     // if video showing
@@ -65,6 +86,15 @@ exit.addEventListener('click', function(){
 // show video button
 showVideo.addEventListener('click', function(){
     theVideo.classList.toggle('active');
+})
+
+// show description button
+showDescription.addEventListener('click', function(){
+    // get active board
+    let activeBoard = boards.find(board => board.classList.contains('active'));
+    // toggle description active    
+    let myDescription = descriptions.find(des => des.classList[1] == activeBoard.classList[1]);
+    myDescription.classList.toggle('active');
 })
 
 
