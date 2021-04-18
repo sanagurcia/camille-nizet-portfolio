@@ -1,6 +1,24 @@
 /* NAVIGATION */
 const pages = document.getElementsByClassName('page');
 const navBar = document.querySelector('.home-nav-bar ul');
+const up = document.getElementById('up');
+const down = document.getElementById('down');
+
+let pageIndex = 0;
+
+/* arrows */
+down.addEventListener('click', function() {
+    if (pageIndex != 4){
+        moveToPage(pageIndex+1);
+    }
+});
+
+up.addEventListener('click', function(){
+    if (pageIndex != 0){
+        moveToPage(pageIndex-1);
+    }
+});
+
 
 navBar.addEventListener('click', function(e){
   let navElements = Array.from(navBar.children);
@@ -10,6 +28,7 @@ navBar.addEventListener('click', function(e){
 
 function moveToPage(index){
   pages[index].scrollIntoView({behavior: 'smooth'});
+  pageIndex = index;
 }
 
 
@@ -135,34 +154,3 @@ exit2.addEventListener('click', function(){
     let activeBoard = oBoards.find(board => board.classList.contains('active'));
     activeBoard.classList.toggle('active');
 });
-
-
-
-/* SCROLLING */
-
-/* 
-let scrollPos = 0;
-
-window.addEventListener('scroll', function(e){
-  // scroll down into next page 
-  if (isScrollDown(this.scrollY)){
-    if (notLastPage){
-      pageIndex ++;
-      pages[pageIndex].scrollIntoView({behaviour: "smooth", block: "top"});
-    }
-  }
-  // scroll up a page 
-  else if (notFirstPage){
-    pageIndex --;
-    pages[pageIndex].scrollIntoView(true);
-  }
-
-  // update scroll position 
-  scrollPos = this.scrollY;
-}); 
-
-function isScrollDown(scrollY){
-  return scrollY > scrollPos ? true : false;
-}
-
-*/

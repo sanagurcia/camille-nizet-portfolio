@@ -27,6 +27,8 @@ html {
 body {
   overflow-x: hidden;
   font-size: 1.6vh;
+  overflow-y: hidden;
+  position: relative;
 }
 
 /* notice standard padding */
@@ -49,6 +51,41 @@ h1 {
     padding: 4vh 5vw;
     /* reduce padding by half */
   }
+}
+
+
+/* NAV */
+.arrows {
+    position: fixed;
+    bottom: 5vh;
+    right: 5vh;
+    z-index: 2;
+}
+
+.arrows div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3vh;
+    width: 6vh;
+    height: 6vh;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.arrows div:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.arrows div:active {
+    background-color: black;
+    color: white;
+    transition: ease;
+}
+
+#down {
+    margin-top: 2vh;
 }
 
 /* -------------------------------- */
