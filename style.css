@@ -464,6 +464,7 @@ h1 {
 #show-video:hover {
     background-color: black;
     color: white;
+    transition: none;
 }
 
 #show-video p {
@@ -506,6 +507,7 @@ h1 {
 #show-description:hover {
     background-color: black;
     color: white;
+    transition: none;
 }
 
 
