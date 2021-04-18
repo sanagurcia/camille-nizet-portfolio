@@ -97,14 +97,16 @@ exit.addEventListener('click', function(){
 
     // if video showing
     if (theVideo.classList.contains('active')){
-        theVideo.pause();
+        theVideo.style.display="none";
         theVideo.classList.toggle('active');
+
     }
 });
 
-// show video button
+// show the video
 showVideo.addEventListener('click', function(){
     theVideo.classList.toggle('active');
+    theVideo.style.display="block";
 })
 
 // show description button

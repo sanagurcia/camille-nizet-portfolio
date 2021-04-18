@@ -75,13 +75,12 @@ h1 {
 
 .arrows div:hover {
     cursor: pointer;
-    transform: scale(1.05);
+    background-color: black;
+    color: white;
 }
 
 .arrows div:active {
-    background-color: black;
-    color: white;
-    transition: ease;
+    transform: scale(1.1);
 }
 
 #down {
@@ -340,8 +339,6 @@ h1 {
   width: 36vh;
 }
 
-
-
 /* BOARDS */
 /* for darkening background */
 .art-direction .dark.active {
@@ -400,6 +397,11 @@ h1 {
     font-size: 1vw;
 }
 
+#exit:hover {
+    background-color: black;
+    color: white;
+}
+
 #exit.active {
     opacity: 1;
     z-index: 6;
@@ -430,17 +432,17 @@ h1 {
 /* Video */
 #video {
     width: 80vw;
+    height: 45vw;
     position: absolute;
     top: calc((100vh - 45vw)/2);
     left: 10vw;
-    z-index: -2;
-    opacity: 0;
+    display: none;
 }
 
 #video.active {
     z-index: 5;
-    opacity: 1;
     transition: opacity 1s ease;
+    display: block;
 }
 
 #show-video {
@@ -457,6 +459,11 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#show-video:hover {
+    background-color: black;
+    color: white;
 }
 
 #show-video p {
@@ -496,6 +503,10 @@ h1 {
     transition: 1s ease;
 }
 
+#show-description:hover {
+    background-color: black;
+    color: white;
+}
 
 
 /* board credits */
