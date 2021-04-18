@@ -269,6 +269,7 @@ h1 {
 
 .art-direction-container img:hover {
     cursor: pointer;
+    transform: scale(1.05);
 }
 
 .row1 {
@@ -301,6 +302,8 @@ h1 {
 #sports {
   width: 36vh;
 }
+
+
 
 /* BOARDS */
 /* for darkening background */
@@ -526,6 +529,10 @@ h1 {
     width: 35vh;
     cursor: pointer;
     z-index: 1;
+}
+
+.other-directions .o-button img:hover {
+    transform: scale(1.05);
 }
 
 .o-button.good-grief {
