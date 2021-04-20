@@ -78,7 +78,6 @@
     }
 
 
-
     /* ART D */
     .art-direction-container {
         display: flex;
@@ -192,4 +191,51 @@
         font-size: 1.5vh;
     }
 
+
+    /* ABOUT TIMELINE */
+    .about-timeline {
+        margin-top: 5vh;
+        flex-direction: row;        
+        justify-content: space-around;
+        
+      }
+      
+      .about-timeline .line {
+          background-color: black;
+          width: 0.5vh;
+          height: 90vh;
+      }
+      
+      .about-timeline .top{
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+          text-align: right;
+      }
+      
+      .about-timeline .top div {
+          max-width: 35vw;
+      }
+      
+      .about-timeline .top .vertical {
+          display: none;
+      }
+      
+      .about-timeline .bottom {
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+      }
+      
+      .about-timeline .bottom div {
+          max-width: 35vw;
+      }
+      
+      .about-timeline .bottom .vertical {
+          display: none;
+      }
+
+      .about-timeline p {
+        font-size: 1.4vh;
+    }
 }
