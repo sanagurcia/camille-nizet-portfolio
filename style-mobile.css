@@ -77,7 +77,41 @@
         height: auto;
     }
 
+
+
     /* ART D */
+    .art-direction-container {
+        display: flex;
+        height: 90vh;
+    }
+
+    .art-direction-container div {
+        margin: 0;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .row1 {
+        position: relative;
+        top: -13vh;
+    }
+
+    .row2 {
+        position: relative;
+        top: 7vh;
+    }
+
+    #butts {
+        width: 25vh;
+    }
+
+    #shower, #monty, #sports {
+        width: 20vh;
+    }
+
     /* OTHER D */
     /* CONTACT */
 }
