@@ -1,0 +1,50 @@
+@media (max-aspect-ratio: 1){
+    body {
+        overflow-y: auto;
+    }
+
+    .page {
+        padding: 5vh 5vw;
+    }
+
+    .arrows {
+        display: none;
+    }
+
+    /* HOME */
+
+    .home h1 span {
+        display: none;
+    }
+
+    .home-pic img {
+        width: 40vh;
+        height: auto;
+    }
+
+    .home-pic {
+        display: flex;
+        justify-content: center;
+        margin-top: 5vh;
+    }
+      
+    .home-container {
+        display: block;
+    }
+
+    .home-nav-bar ul {
+        margin-top: 5vh;
+        margin-left: 10vw;
+        columns: 1;
+    }
+      
+    .home-nav-bar ul li {
+        font-size: 3.5vh;
+        text-decoration: underline;
+        line-height: 7vh;
+    }
+    /* ABOUT */
+    /* ART D */
+    /* OTHER D */
+    /* CONTACT */
+}
