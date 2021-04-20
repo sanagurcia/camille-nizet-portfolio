@@ -114,4 +114,58 @@
 
     /* OTHER D */
     /* CONTACT */
+    .contact {
+        padding-top: 2vh;
+    }
+    .contact-pic {
+        display: flex;
+        justify-content: center;
+    }
+    .contact-pic img {
+        width: 30vh;
+        height: auto;
+    }
+
+    .contact-container {
+        display: block;
+    }
+
+    .contact-text {
+        width: 80%;
+    }
+
+    .contact-text > p {
+        padding-left: 5vh;
+        font-size: 1.5vh;
+        line-height: 4.5vh;
+    }
+
+    .contact-text h1 {
+        font-size: 3vh;
+        margin-bottom: 1vh;
+    }
+
+    #contact-info p {
+        font-size: 1.5vh;
+        line-height: 3vh;
+    }
+
+    .author {
+        display: block;
+    }
+
+    .author .left {
+        width: 100%;
+        margin-top: -2vh;
+    }
+
+    .author .left h2 {
+        font-size: 2vh;
+    }
+
+    .author .right {
+        margin-top: 2vh;
+        font-size: 1.5vh;
+    }
+
 }
