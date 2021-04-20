@@ -12,6 +12,9 @@
     }
 
     /* HOME */
+    .home h1 {
+        font-size: 4vh;
+    }
 
     .home h1 span {
         display: none;
@@ -25,7 +28,7 @@
     .home-pic {
         display: flex;
         justify-content: center;
-        margin-top: 5vh;
+        margin-top: 7vh;
     }
       
     .home-container {
@@ -43,7 +46,37 @@
         text-decoration: underline;
         line-height: 7vh;
     }
+
     /* ABOUT */
+    .about {
+        height: 250vh;
+        background-size: 100vw 250vh;
+    }
+
+    .about-main {
+        display: block;
+    }
+
+    .about-text {
+        width: 90vw;
+        font-size: 1.8vh;
+    }
+
+    .languages ul {
+        width: 100%;
+    }
+
+    .about-pic {
+        margin-top: 10vh;
+        display: flex;
+        justify-content: center;
+    }
+
+    .about-pic img {
+        width: 40vh;
+        height: auto;
+    }
+
     /* ART D */
     /* OTHER D */
     /* CONTACT */
