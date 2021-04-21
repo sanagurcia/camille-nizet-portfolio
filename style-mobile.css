@@ -239,3 +239,21 @@
         font-size: 1.4vh;
     }
 }
+
+@media (orientation: landscape) and (max-device-width: 800px){
+    body {
+        overflow-y: auto;
+    }
+    .arrows {
+        display: none;
+    }
+    #art-d:hover::after {
+        content: '';
+    }
+    #other-d:hover::after {
+        content: '';
+    }
+    #contact:hover::after {
+        content: '';
+    }
+}

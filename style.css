@@ -115,7 +115,7 @@ h1 {
 }
 
 .home-pic img {
-  height: 60vh;
+  height: 55vh;
   width: auto;
 }
 
@@ -138,6 +138,29 @@ h1 {
 }
 .home-nav-bar li:active {
   transform: scale(0.99);
+}
+
+/* hovering picture change */
+@media (min-aspect-ratio: 1.6){
+    .home-nav-bar ul li:hover::after{
+        display: block;
+        position: absolute;
+        height: 60vh;
+        width: auto;
+        left: 13vw;
+        top: 25vh;
+        z-index: 2;
+    }
+
+    #art-d:hover::after {
+        content: url('assets/doodles/ArtDirection_doodle.png');
+    }
+    #other-d:hover::after {
+        content: url('assets/doodles/Other_doodle.png');
+    }
+    #contact:hover::after {
+        content: url('assets/doodles/Contact_doodle.png');
+    }
 }
 
 /* RESPONSIVE DESIGN HOME */
