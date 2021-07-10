@@ -91,9 +91,14 @@ buttons.forEach(button => {
         myCredit.classList.toggle('active');
 
         // check if shower/monty -> add description button
-        if (myBoard.classList.contains('monty') || myBoard.classList.contains('shower')){
+        const classList = myBoard.classList
+        if (classList.contains('monty') || classList.contains('shower')){
             showDescription.classList.toggle('active');
+        } else if (classList.contains('bees')){
+            showDescription.classList.toggle('active');
+            showDescription.style.right = '20vw';
         }
+
     });
 });
 
@@ -117,6 +122,10 @@ exit.addEventListener('click', function(){
     // check descriptions
     if (activeBoard.classList.contains('monty') || activeBoard.classList.contains('shower')){
         showDescription.classList.toggle('active');
+        descriptions.forEach(des => des.classList.remove('active'))
+    } else if (activeBoard.classList.contains('bees')){
+        showDescription.classList.toggle('active');
+        showDescription.style.right = '10vw';
         descriptions.forEach(des => des.classList.remove('active'))
     }
 
