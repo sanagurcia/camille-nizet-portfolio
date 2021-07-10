@@ -314,31 +314,33 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-left: 10vw;
-  margin-top: -3vh;
+  margin: 7vh 10vw;
+}
+
+#bees {
+    width: 30vh;
 }
 
 #butts {
-  width: 45vh;
-}
-
-#shower {
-  width: 35vh;
+  width: 30vh;
 }
 
 .row2 {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-right: 20vw;
 }
 
 #monty {
   width: 35vh;
 }
 
-#sports {
+#trump {
   width: 36vh;
+}
+
+#shower {
+    width: 35vh;
 }
 
 /* BOARDS */
@@ -544,7 +546,7 @@ h1 {
     #monty {
         width: 30vh;
     }
-    #sports {
+    #trump {
         width: 30vh;
     }
     .row1 {

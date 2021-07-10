@@ -81,8 +81,8 @@ buttons.forEach(button => {
         let myBoard = boards.find(board => board.classList[1] == myClass);
         myBoard.classList.toggle('active');
 
-        // check if sports board
-        if (myBoard.classList.contains('sports')){
+        // check if bees board
+        if (myBoard.classList.contains('bees')){
              showVideo.classList.toggle('active');
         }
 
@@ -109,8 +109,8 @@ exit.addEventListener('click', function(){
     let activeCredit = credits.find(credit => credit.classList.contains('active'));
     activeCredit.classList.toggle('active');
 
-    // check sports
-    if (activeBoard.classList.contains('sports')){
+    // check trump
+    if (activeBoard.classList.contains('bees')){
         showVideo.classList.toggle('active');
     }
 
