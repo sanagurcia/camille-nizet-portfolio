@@ -714,6 +714,10 @@ h1 {
   margin-left: 5vw;
 }
 
+#contact-info a {
+    color: black;
+}
+
 .author {
   height: 15vh;
   display: flex;
