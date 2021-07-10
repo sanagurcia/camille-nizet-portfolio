@@ -46,7 +46,7 @@ h1 {
 }
 
 /* responsive design for tablet size */
-@media (max-aspect-ratio: 1.2) {
+@media (max-aspect-ratio: 1.2), (max-width: 1200px) {
   .page {
     padding: 4vh 5vw;
     /* reduce padding by half */
@@ -116,7 +116,7 @@ h1 {
 
 .home-pic img {
   height: 55vh;
-  width: auto;
+  width: 55vh;
 }
 
 .home-nav-bar ul {
@@ -140,32 +140,11 @@ h1 {
   transform: scale(0.99);
 }
 
-/* hovering picture change */
-@media (min-aspect-ratio: 1.6){
-    .home-nav-bar ul li:hover::after{
-        display: block;
-        position: absolute;
-        height: 60vh;
-        width: auto;
-        left: 13vw;
-        top: 25vh;
-        z-index: 2;
-    }
 
-    #art-d:hover::after {
-        content: url('assets/doodles/ArtDirection_doodle.png');
-    }
-    #other-d:hover::after {
-        content: url('assets/doodles/Other_doodle.png');
-    }
-    #contact:hover::after {
-        content: url('assets/doodles/Contact_doodle.png');
-    }
-}
 
 /* RESPONSIVE DESIGN HOME */
 /* add horizontal padding */
-@media (min-aspect-ratio: 1.6) {
+@media (min-aspect-ratio: 1.6), (min-width: 1600px) {
   .home-container {
     padding: 0 4vw;
     /* with respect to page content box (i.e. vertical border beneath h1) */
@@ -173,14 +152,14 @@ h1 {
 }
 
 /* reduce horizontal padding */
-@media (max-aspect-ratio: 1.6) {
+@media (max-aspect-ratio: 1.6), (max-width: 1600px) {
   .home-container {
     padding: 0;
   }
 }
 
 /* restructure layout for tablet */
-@media (max-aspect-ratio: 1.2) {
+@media (max-aspect-ratio: 1.2), (max-width: 1200px) {
   .home-container {
     flex-direction: column;
     justify-content: space-around;
@@ -300,7 +279,7 @@ h1 {
 }
 
 /* RESPONSIVE */
-@media (max-aspect-ratio: 1.6){
+@media (max-aspect-ratio: 1.6), (max-width: 1600px) {
   .about-text {
     font-size: 1vw;
   }
@@ -308,7 +287,7 @@ h1 {
     font-size: 1vh;
 }
 }
-@media (max-aspect-ratio: 1.2){
+@media (max-aspect-ratio: 1.2), (max-width: 1200px) {
     .about-text {
         font-size: 1.3vh;
     }
@@ -555,7 +534,7 @@ h1 {
 }
 
 /* RESPONSIVE */
-@media (max-aspect-ratio: 1.2){
+@media (max-aspect-ratio: 1.2), (max-width: 1200px) {
     #butts {
         width: 35vh;
     }
@@ -757,7 +736,7 @@ h1 {
 }
 
 /* responsive design contact */
-@media (min-aspect-ratio: 1.6){
+@media (min-aspect-ratio: 1.6), (min-width: 1600px) {
   .contact-pic {
     padding-left: 2vw;
   }

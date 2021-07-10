@@ -6,8 +6,33 @@ const down = document.getElementById('down');
 
 let pageIndex = 0;
 
+/* Home picture change on link hover */
+const aboutLink = {
+    element: document.getElementById('about'),
+    imageUrl: 'assets/doodles/home.png'
+} 
+const artDLink = {
+    element: document.getElementById('art-d'),
+    imageUrl: 'assets/doodles/art_direction.png'
+}
+const otherDLink = {
+    element: document.getElementById('other-d'),
+    imageUrl: 'assets/doodles/other_directions.png'
+}
+const contactLink = {
+    element: document.getElementById('contact'),
+    imageUrl: 'assets/doodles/contact.png'
+}
+const links = [aboutLink, artDLink, otherDLink, contactLink];
+const imageTag = document.getElementById('image-tag');
+
+navBar.addEventListener('mouseover', function(event){
+    const theLink = links.find(link => link.element === event.target);
+    imageTag.src = theLink.imageUrl;
+})
+
 /* arrows */
-down.addEventListener('click', function() {
+down.addEventListener('click', function(){
     if (pageIndex != 4){
         moveToPage(pageIndex+1);
     }

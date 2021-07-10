@@ -1,4 +1,4 @@
-@media (max-aspect-ratio: 1){
+@media (max-aspect-ratio: 1), (max-width: 1000px){
     body {
         overflow-y: auto;
     }
@@ -22,7 +22,7 @@
 
     .home-pic img {
         width: 40vh;
-        height: auto;
+        height: 40vh;
     }
 
     .home-pic {
